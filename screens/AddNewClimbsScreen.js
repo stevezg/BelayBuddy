@@ -8,7 +8,7 @@ export default class AddNewClimbsScreen extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Text> Add New Climbs </Text>
       </View>
     )
   }

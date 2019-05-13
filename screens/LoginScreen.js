@@ -18,7 +18,7 @@ import PropTypes from 'prop-types'
 
 import { MonoText } from '../components/StyledText'
 
-export default class HomeScreen extends React.Component {
+export default class LoginScreen extends React.Component {
   static navigationOptions = { header: null }
   static propTypes = {
     err: PropTypes.string,

@@ -176,6 +176,20 @@ const Users = [
     ]
   },
   {
+    id: '17',
+    uri: require('../assets/images/climbers/17.jpg'),
+    name: 'Steve Anderson',
+    grade: '5.10.c',
+    description: 'Looking for a climbing partner for el cap this season.',
+    climbs_completed: [
+      'fortune-500',
+      'wheel-of-cheese',
+      'edge oftime',
+      'cryogenics',
+      'twin cracks'
+    ]
+  },
+  {
     id: '10',
     uri: require('../assets/images/climbers/10.jpg'),
     name: 'climber',
@@ -531,13 +545,14 @@ export default class App extends React.Component {
             <View
               style={{
                 postition: 'absolute',
-                flex: 0.3,
+
+                flex: 0.5,
                 height: null,
                 padding: 10,
                 backgroundColor: 'white',
-                marginBottom: 20, //could be cool to do a conditional Red or green depending on the direction of the swipe
+                marginBottom: 50,
                 display: 'flex',
-                border: 'black solid',
+                border: 'black',
                 borderRadius: 20
               }}
             >
@@ -545,21 +560,28 @@ export default class App extends React.Component {
                 style={{
                   fontWeight: 'bold',
                   color: 'goldenrod',
-                  fontSize: 23
+                  fontSize: 23,
+                  paddingBottom: 10
                 }}
               >
                 {item.name}
               </Text>
-              <Text>
+              <Text style={{ paddingBottom: 4 }}>
                 Climbs <Text style={{ fontWeight: 'bold' }}>{item.grade}</Text>
               </Text>
-              <Text>
+              <Text style={{ paddingBottom: 10 }}>
                 Immediate Objective -{' '}
                 <Text style={{ fontStyle: 'italic' }}>
                   {item.immediate_initiative}
                 </Text>
               </Text>
               <Text style={{ paddingBottom: 10 }}>{item.description}</Text>
+              {/* <Text>
+                {item.climbs_completed.map(climb => {
+                  return <Text>{climb}</Text>
+                })}
+              </Text> */}
+
               <Text>Routes Climbed: </Text>
               <RoutesClimbedList />
             </View>
